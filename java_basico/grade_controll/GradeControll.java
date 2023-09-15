@@ -11,7 +11,7 @@ public class GradeControll {
     if (grade < 7) {
       System.out.println("This student has flunked");
     } else {
-      System.out.println("This student passed");
+      System.out.println("This student have2 passed");
     }
   }
 
