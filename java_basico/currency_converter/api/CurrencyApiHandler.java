@@ -31,6 +31,7 @@ public class CurrencyApiHandler {
 		try{
 			return client.send(request, HttpResponse.BodyHandlers.ofString());
 		} catch (IOException | InterruptedException ioException){
+			System.out.println(ioException.getMessage());
 			return null;
 		}
 	}

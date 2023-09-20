@@ -25,8 +25,8 @@ public class Main {
 		Currency currency = new Currency(from, to);
 		try{
 			currency.convert(amount);
-		} catch (APIException apiException){
-			System.out.println("Não foi possivel se conectar na api");
+		} catch (APIException e){
+			System.out.println(e.getMessage());
 		}
 	}
 }

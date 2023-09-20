@@ -20,7 +20,8 @@ public class Currency {
 	public void convert(float amount) throws APIException {
 		String httpResponse = converter.convertAmountFromTo(amount, from, to);
 		if(httpResponse == null){
-			throw new APIException("Unable to reach the API");
+			System.out.println(httpResponse);
+			throw new APIException("Http response é nulo");
 		}
 		CurrencyAPIFormat data = JsonConverter.getObjectFromJson(httpResponse, CurrencyAPIFormat.class);
 		if(data.error() > 0){
